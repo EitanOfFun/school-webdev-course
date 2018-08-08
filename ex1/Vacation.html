@@ -9,7 +9,6 @@
 
 <header>
     <img class="logo" src="images/moon-shuttle-logo.png">
-    <!--<span class="site_name">MoonShuttle</span>-->
     <span class="catchphrase">The ONLY trusted shuttle service to the moon!</span>
 </header>
 
@@ -32,11 +31,15 @@
         <span class="testimonials_title">Testimonials:</span>
         <br>
         <span class="testimonials_text">"Absolutely, without a doubt, the BEST moon shuttle service I've ever been on!"</span>
+        <br><br>
+        <span class="testimonials_text">"Seems almost too good to be true!"</span>
+        <br><br>
+        <span class="testimonials_text">"The moon's craters are surprisingly very pleasant to sleep in! Definitely recommend the Vacuum sealed tent for the best experience"</span>
     </aside>
 </div>
 <main>
     <section class="section_search">
-        <form>
+        <form action="">
             <div class="moon_side_section">
                 <label class="moon_side_label">Side of the moon to land on</label>
                 <select required class="moon_side_select" title="side_of_the_moon">
@@ -66,14 +69,26 @@
                     <input class="children_select" type="number" min="0" max="17" step="1" required value="0">
                 </div>
             </div>
-            <div class="transport_section">
-                <label>Transport</label>
-                <input type="checkbox" >
+            <div class="accommodation_section">
+                <input type="radio" name="accommodation" value="meals_only" id="meals_only">
+                <label for="meals_only">Only Meals Included</label><br/>
+                <input type="radio" name="accommodation" value="meals_suit" id="meals_suit">
+                <label for="meals_suit">Space Suit + Meals</label><br/>
+                <input type="radio" name="accommodation" value="meals_suit_tent" id="meals_suit_tent">
+                <label for="meals_suit_tent">Space Suit + Meals + Vacuum sealed tent</label>
             </div>
+            <div class="transport_section">
+                <input type="checkbox" id="transportation_to_crater">
+                <label for="transportation_to_crater">Transportation to crater</label>
+            </div>
+            <input class="btn_search" type="submit" value="Search">
         </form>
     </section>
     <section class="section_special">
-
+        <img src="images/elon-ad.gif" class="elon-ad">
+        <div class="buy2get1free_section">
+            <a class="buy2get1free_link" href="#">Buy 2 get 1 free!!!</a>
+        </div>
     </section>
 </main>
 <footer>
