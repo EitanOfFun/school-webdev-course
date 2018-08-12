@@ -24,16 +24,7 @@ function stringCompare(s1, s2) {
 function numCompare(n1, n2) {
     return n1 - n2;
 }
-function accessAndCompare(accessFunc, compareFunc) {
-    return function (a, b) {
-        return compareFunc(accessFunc(a), accessFunc(b));
-    }
-}
-function compareByTwo(firstCompare, secondCompare) {
-    return function(a, b) {
-        return firstCompare(a, b) || secondCompare(a, b);
-    }
-}
+
 function identity(a) {
     return a;
 }
@@ -62,15 +53,18 @@ function parseText(text, caseSensitive = true, puncSensitive = true) {
 
     return Array.from(hashmap.entries());
 }
+function accessAndCompareByTwo(firstCompare, secondCompare, firstAccess, secondAccess) {
+    return function (a, b) {
+        return firstCompare(firstAccess(a), firstAccess(b)) || secondCompare(secondAccess(a), secondAccess(b));
+    }
+}
 function sortText(arr, word) {
-    const compareByCount = accessAndCompare(second, numCompare);
-    const compareByWord = accessAndCompare(first, stringCompare);
-    const compareByWordThenByCount = compareByTwo(compareByWord, compareByCount);
-    const compareByCountThenByWord = compareByTwo(compareByCount, compareByWord);
     if (word)
-        return arr.sort(compareByWordThenByCount);
-    return arr.sort(compareByCountThenByWord);
+        return arr.sort(accessAndCompareByTwo(stringCompare, numCompare, first, second));
+    return arr.sort(accessAndCompareByTwo(numCompare, stringCompare, second, first));
 }
 
+
+// MAIN
 const arr = parseText("He saw her walking, so he asked her.", false, false);
-console.log(sortText(arr, true));
+console.log(sortText(arr, false));
