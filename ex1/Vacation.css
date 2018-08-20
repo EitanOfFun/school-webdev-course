@@ -85,7 +85,6 @@ main {
 .returning_section {
     width: 230px;
     display: inline-block;
-
 }
 .returning_select {
     margin-top: 3px;
@@ -113,13 +112,15 @@ main {
     color: red;
     text-align: right;
     font-size: 4.5em;
-    font-family: florentiamedium, sans-serif;
 }
 .bottom_right_aside {
     height: 250px;
     background-color: #070F11;
     padding: 10px;
 
+}
+label {
+    font-family: florentiamedium, sans-serif;
 }
 .testimonials_title {
     color: white;
@@ -167,7 +168,7 @@ ul {
     padding: 10px;
 }
 li {
-    margin-right: 5px;
+    /*margin-right: 5px;*/
     margin-left: 100px;
     display: inline-block;
 
