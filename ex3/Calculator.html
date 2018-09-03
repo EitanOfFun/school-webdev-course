@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Calculator.css">
+    <script src="Calculator.js"></script>
+</head>
+<body onload="onPageLoad()">
+    <main class="calc-main">
+        <div class="calc-display">
+            <span id="calc-display-text"></span>
+        </div>
+        <section class="op-buttons">
+            <input type="button" value="+" class="op-button calc-btn">
+            <input type="button" value="-" class="op-button calc-btn">
+            <input type="button" value="*" class="op-button calc-btn">
+            <input type="button" value="/" class="op-button calc-btn">
+        </section>
+        <section class="lower-buttons">
+            <section class="value-buttons">
+                <input type="button" value="7" class="value-button calc-btn">
+                <input type="button" value="8" class="value-button calc-btn">
+                <input type="button" value="9" class="value-button calc-btn">
+                <input type="button" value="4" class="value-button calc-btn">
+                <input type="button" value="5" class="value-button calc-btn">
+                <input type="button" value="6" class="value-button calc-btn">
+                <input type="button" value="1" class="value-button calc-btn">
+                <input type="button" value="2" class="value-button calc-btn">
+                <input type="button" value="3" class="value-button calc-btn">
+                <input type="button" value="0" class="value-button calc-btn">
+                <input type="button" value="." class="value-button calc-btn">
+                <input type="button" value="AC" class="value-button calc-btn">
+            </section>
+            <input type="button" value="=" id="equals-btn" class="calc-btn">
+        </section>
+    </main>
+</body>
+</html>
